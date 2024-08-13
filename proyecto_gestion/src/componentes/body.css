@@ -1,0 +1,39 @@
+.body-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+  
+  .left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  .image {
+    margin-bottom: 1rem;
+  }
+
+  .register-button {
+    padding: 15px 30px;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-bottom: 50px;
+  }
+  
+  .right-column {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  
+  .body-text {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    padding: 0 2rem;
+    font-family: cursive;
+  }
+  

@@ -1,0 +1,30 @@
+.titulo {
+  margin: 15px;
+  font-family: 'Pacifico', cursive;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgb(104, 212, 54)
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-nav-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+
+  .navbar-nav-right .btn {
+    margin-right: 1rem;
+  }
+  
+  .navbar-nav-right .d-flex.align-items-center {
+    display: flex;
+    align-items: center;
+  }
+  
