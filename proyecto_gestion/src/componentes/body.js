@@ -18,6 +18,7 @@ export const Body = () => {
           en una historia de éxito, tomando decisiones informadas y alcanzando tus metas económicas.
         </p>
       </div>
+      
     </div>
   );
 };

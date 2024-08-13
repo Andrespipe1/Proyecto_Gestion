@@ -27,10 +27,10 @@ export const Pie = () => {
           <div className="col-sm-12 col-md-4 text-center text-md-left">
             <h5 className="footer-heading">Contacto</h5>
             <p className="footer-contact">
-              Calle Ejemplo 123<br/>
-              Ciudad, País<br/>
+              Naciones Unidas y Amazonas<br/>
+              Quito, Ecuador<br/>
               Teléfono: (123) 456-7890<br/>
-              Email: contacto@ejemplo.com
+              Email: andres.tufino@epn.edu.ec
             </p>
           </div>
 
