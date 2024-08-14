@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './login.css';
+import { Cabecera } from './cabecera';
+import { Pie } from './pie';
 
 const Login = () => {
     const [formValues, setFormValues] = useState({
@@ -49,7 +51,7 @@ const Login = () => {
     };
 
     const handleForgotPasswordClick = () => {
-        navigate('/recuperar-password');
+        navigate('/recuperar');
     };
 
     const handleRegisterClick = () => {
@@ -61,6 +63,8 @@ const Login = () => {
     };
 
     return (
+        <div>
+        <Cabecera></Cabecera>
         <div className="login-container">
             <div className="login-card">
                 <h2 className="text-center">Iniciar Sesión</h2>
@@ -99,6 +103,8 @@ const Login = () => {
                     </div>
                 </form>
             </div>
+        </div>
+        <Pie></Pie>
         </div>
     );
 };

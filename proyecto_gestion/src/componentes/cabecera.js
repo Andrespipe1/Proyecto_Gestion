@@ -26,7 +26,7 @@ export const Cabecera = () => {
             className="mr-3"
             onClick={handleLoginClick}
           >
-            Iniciar sesión
+            Log In
           </Button>
           <a
             href="#"

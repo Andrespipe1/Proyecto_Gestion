@@ -38,7 +38,7 @@ const Sidebar = () => {
                         </ul>
                         <li>Pagos:</li>
                         <ul>
-                            <li><a href="#registrar">Registrar un pago</a></li>
+                            <li><a href="#registrar" onClick={handlemontoClick}>Registrar un pago</a></li>
                         </ul>
                         <div className="mensaje">
                             <h4>Consejo del día</h4>

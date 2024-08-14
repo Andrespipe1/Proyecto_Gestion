@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import Monto from './componentes/pagina_monto';
 import Visualizar from './componentes/visualizar';
 import Listas from './componentes/visualizarlistas';
+import RecuperarContrasena from './componentes/recuperar';
 
 
 
@@ -34,7 +35,7 @@ function App() {
         <Route path='/pagina_monto' element={<Monto/>} />
         <Route path='/visualizar' element={<Visualizar/>}/>
         <Route path='/visualizarlistas' element={<Listas/>}/>
-
+        <Route path='/recuperar' element={<RecuperarContrasena/>}/>
       </Routes>
     </Router>
 

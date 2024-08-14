@@ -1,0 +1,36 @@
+
+.recuperar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.recuperar-card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.recuperar-card h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #343a40;
+}
+
+.form-control.is-invalid {
+    border-color: #dc3545;
+}
+
+.invalid-feedback {
+    font-size: 0.875rem;
+    color: #dc3545;
+}
+
+.alert-success {
+    margin-top: 1rem;
+}
