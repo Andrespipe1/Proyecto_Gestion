@@ -7,6 +7,7 @@ import Registro from './componentes/registro';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import Monto from './componentes/pagina_monto';
+import Visualizar from './componentes/visualizar';
 
 
 
@@ -30,6 +31,7 @@ function App() {
         <Route path='/login' element={<Login />}  />
         <Route path='/registro' element={<Registro/>} />
         <Route path='/pagina_monto' element={<Monto/>} />
+        <Route path='/visualizar' element={<Visualizar/>}/>
       </Routes>
     </Router>
 

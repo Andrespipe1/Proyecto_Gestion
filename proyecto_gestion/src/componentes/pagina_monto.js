@@ -1,10 +1,10 @@
 import React from 'react';
 import { Col, Row, Container } from 'react-bootstrap';
 import { Cabecera } from './cabecera';
-import { Body } from './body';
 import { Pie } from './pie';
 import Sidebar from './sidebar';
 import MainContent from './maincontent.js';
+import "./pagina_monto.css"
 
 const Monto = () => {
   return (

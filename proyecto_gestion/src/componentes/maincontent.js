@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Row, Button, Form, InputGroup } from 'react-bootstrap';
-
+import "./pagina_monto.js"
 const MainContent = () => {
   return (
     <Col md={10} className="bg-light p-4">
