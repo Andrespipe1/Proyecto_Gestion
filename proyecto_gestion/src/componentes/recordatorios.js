@@ -51,7 +51,7 @@ const PaymentReminder = () => {
                 <Form.Control 
                   type="text" 
                   name="detail" 
-                  placeholder="E.g., Rent, Utilities" 
+                  placeholder="Pago Facturas" 
                   value={newReminder.detail} 
                   onChange={handleInputChange} 
                 />
@@ -77,7 +77,7 @@ const PaymentReminder = () => {
                 <Form.Control 
                   type="text" 
                   name="notes" 
-                  placeholder="Additional details..." 
+                  placeholder="Detalles adicionales" 
                   value={newReminder.notes} 
                   onChange={handleInputChange} 
                 />
