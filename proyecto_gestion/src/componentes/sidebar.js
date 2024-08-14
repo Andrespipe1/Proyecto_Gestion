@@ -16,7 +16,9 @@ const Sidebar = () => {
     const handlelistasClick = () => {
         navigate('/visualizarlistas');
     };
-
+    const handlerecordaClick = () => {
+        navigate('/recordatorios');
+    };
     const toggleSidebar = () => {
         setSidebarVisible(!isSidebarVisible);
     };
@@ -42,7 +44,7 @@ const Sidebar = () => {
                         </ul>
                         <li>Recordatorios:</li>
                         <ul>
-                            <li><a href="#registrar" onClick={handlemontoClick}>Registrar un pago</a></li>
+                            <li><a href="#" onClick={handlerecordaClick}>Programar un recordatorio</a></li>
                         </ul>
                         <div className="mensaje">
                             <h4>Consejo del día</h4>

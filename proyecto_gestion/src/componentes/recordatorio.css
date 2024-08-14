@@ -1,0 +1,78 @@
+/* Estilo del contenedor principal */
+.card {
+    border-radius: 15px;
+    background: linear-gradient(135deg, #e0f7fa, #80deea);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+  
+  /* Título del card */
+  .card-title {
+    font-family: 'Poppins', sans-serif;
+    color: #00796b;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Labels del formulario */
+  .form-label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #004d40;
+  }
+  
+  /* Campos del formulario */
+  .form-control {
+    border-radius: 10px;
+    border: 2px solid #004d40;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Botón de agregar recordatorio */
+  .button-success {
+    background-color: #00796b;
+    color: #ffffff;
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+  }
+  
+  .button-success:hover {
+    background-color: #004d40;
+  }
+  
+  /* Estilo de los recordatorios */
+  .card .reminder-card {
+    background: #ffffff;
+    border: 1px solid #004d40;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 15px;
+  }
+  
+  .reminder-card strong {
+    color: #00796b;
+  }
+  
+  /* Texto centrado */
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Para cuando no haya recordatorios */
+  .no-reminders {
+    font-family: 'Roboto', sans-serif;
+    color: #00796b;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .icono{
+    width: 95px;
+  }

@@ -10,6 +10,7 @@ import Monto from './componentes/pagina_monto';
 import Visualizar from './componentes/visualizar';
 import Listas from './componentes/visualizarlistas';
 import RecuperarContrasena from './componentes/recuperar';
+import PaymentReminder from './componentes/recordatorios';
 
 
 
@@ -36,6 +37,7 @@ function App() {
         <Route path='/visualizar' element={<Visualizar/>}/>
         <Route path='/visualizarlistas' element={<Listas/>}/>
         <Route path='/recuperar' element={<RecuperarContrasena/>}/>
+        <Route path='/recordatorios' element={<PaymentReminder/>}/>
       </Routes>
     </Router>
 
