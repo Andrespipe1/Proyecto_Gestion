@@ -1,35 +1,46 @@
-/* Estilos para el sidebar */
-.bg-light {
-    background-color: #f8f9fa !important; /* Fondo claro */
-}
-
-.pt-3 {
-    padding-top: 1rem !important; /* Espaciado superior */
-}
-
+/* sidebar.css */
 .sidebar {
+    background-color: #f8f9fa; /* Fondo claro y suave */
+    padding-top: 1rem; /* Espaciado superior */
     height: 100vh; /* Altura completa de la ventana */
     position: fixed; /* Fijo en el lado izquierdo */
     top: 0;
     left: 0;
-    z-index: 1000; /* Asegura que esté sobre otros elementos */
-    border-right: 1px solid #dee2e6; /* Borde derecho para separación */
+    width: 250px; /* Ancho fijo del sidebar */
+    border-right: 1px solid #dee2e6; /* Borde sutil derecho */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transición para ocultar y mostrar */
+    transform: translateX(0); /* Mostrar por defecto */
+    opacity: 1; /* Opacidad por defecto */
 }
 
-h5 {
+.sidebar.hidden {
+    transform: translateX(-100%); /* Ocultar moviéndolo fuera de la pantalla */
+    opacity: 0; /* Hacerlo transparente */
+}
+
+.sidebar-content {
+    padding: 1rem;
+}
+
+.sidebar-title {
     font-size: 1.25rem;
+    font-weight: bold;
     margin-bottom: 1rem;
-    padding: 0 1rem;
+    color: #343a40; /* Color del texto */
+    border-bottom: 2px solid #007bff; /* Línea inferior azul */
+    background: #f1f3f5; /* Fondo gris claro */
+    border-radius: 8px 8px 0 0; /* Bordes redondeados en la parte superior */
+    padding-bottom: 0.5rem; /* Espaciado inferior */
 }
 
 ul {
-    padding-left: 1rem;
+    padding: 0;
+    margin: 0;
 }
 
 .list-unstyled {
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 .list-unstyled li {
@@ -38,17 +49,17 @@ ul {
 
 .list-unstyled a {
     text-decoration: none;
-    color: #007bff; /* Color del enlace */
+    color: #007bff; /* Color azul de los enlaces */
     font-size: 1rem;
     display: block;
-    padding: 0.5rem;
-    border-radius: 0.25rem;
-    transition: background-color 0.2s ease;
+    padding: 0.75rem 1rem;
+    border-radius: 8px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .list-unstyled a:hover {
-    background-color: #e2e6ea; /* Fondo al pasar el ratón */
-    color: #0056b3; /* Color del enlace al pasar el ratón */
+    background-color: #007bff; /* Fondo azul al pasar el ratón */
+    color: #ffffff; /* Texto blanco al pasar el ratón */
 }
 
 ul ul {
@@ -63,11 +74,43 @@ ul ul li a {
     font-size: 0.875rem;
 }
 
-.sidebar p {
+.mensaje {
     padding: 1rem;
-    font-size: 0.875rem;
-    color: #6c757d; /* Color del texto de la nota */
-    background-color: #e9ecef; /* Fondo de la nota */
-    border-radius: 0.25rem;
+    background-color: #e9ecef; /* Fondo gris claro */
+    border: 1px solid #ced4da; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
     margin-top: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+}
+
+.mensaje h4 {
+    font-size: 1.25rem;
+    color: #343a40; /* Color del texto */
+    margin-bottom: 0.5rem;
+}
+
+.mensaje p {
+    font-size: 1rem;
+    color: #495057; /* Color del texto */
+    margin: 0;
+}
+
+/* Estilo del botón para mostrar/ocultar el sidebar */
+.sidebar-toggle {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1000;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+    background-color: #0056b3;
 }

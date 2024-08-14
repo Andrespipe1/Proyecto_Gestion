@@ -1,37 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Col } from 'react-bootstrap';
-import "./sidebar.css"
+import './sidebar.css';
 import { useNavigate } from 'react-router-dom';
 
-
 const Sidebar = () => {
+    const [isVisible, setIsVisible] = useState(true);
+    const navigate = useNavigate();
 
-    const navigate = useNavigate(); 
-
-    const handlegraficoClick = () => {
+    const handleGraficoClick = () => {
         navigate('/visualizar');
     };
-  return (
-    <Col md={2} className="bg-light pt-3">
-      <div>
-        <h5>Menú</h5>
-        <ul className="list-unstyled">
-          <li><a >Ingresar Saldo</a></li>
-          <li>Visualización:</li>
-          <ul>
-            <li><a href="" onClick={handlegraficoClick}>Gráficos</a></li>
-            <li><a href="#listas">Listas</a></li>
-          </ul>
-          <li>Pagos:</li>
-          <ul>
-            <li><a href="#registrar">Registrar un pago</a></li>
-          </ul>
-          <li>¡RECUERDA!</li>
-          <p>De centavito en centavito se va llegando al dolarito</p>
-        </ul>
-      </div>
-    </Col>
-  );
+
+    const toggleSidebar = () => {
+        setIsVisible(prev => !prev);
+    };
+
+    return (
+        <>
+            <button className="sidebar-toggle" onClick={toggleSidebar}>
+                {isVisible ? 'Hide Menu' : '-'}
+            </button>
+            <Col md={2} className={`sidebar ${isVisible ? 'visible' : 'hidden'}`}>
+                <div className="sidebar-content">
+                    <h5 className="sidebar-title">Menú</h5>
+                    <ul className="list-unstyled">
+                        <li><a href="#ingresar-saldo">Ingresar Saldo</a></li>
+                        <li>Visualización:</li>
+                        <ul>
+                            <li><a href="#" onClick={handleGraficoClick}>Gráficos</a></li>
+                            <li><a href="#listas">Listas</a></li>
+                        </ul>
+                        <li>Pagos:</li>
+                        <ul>
+                            <li><a href="#registrar">Registrar un pago</a></li>
+                        </ul>
+                    </ul>
+                    <div className='mensaje'>
+                        <h4>Consejo del día</h4>
+                        <p>De centavito en centavito se va llegando al dolarito</p>  
+                    </div>
+                </div>
+            </Col>
+        </>
+    );
 };
 
 export default Sidebar;

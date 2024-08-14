@@ -3,6 +3,7 @@ import Chart from 'chart.js/auto';
 import './visualizar.css';
 import { Pie } from './pie';
 import { Cabecera } from './cabecera';
+import Sidebar from './sidebar';
 
 
 const Visualizar = () => {
@@ -66,6 +67,7 @@ const Visualizar = () => {
 
     return (<>
         <Cabecera/>
+        <Sidebar/>
         <div className="content">
             <header>
                 

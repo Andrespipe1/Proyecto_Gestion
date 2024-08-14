@@ -3,8 +3,8 @@ import { Col, Row, Container } from 'react-bootstrap';
 import { Cabecera } from './cabecera';
 import { Pie } from './pie';
 import Sidebar from './sidebar';
-import MainContent from './maincontent.js';
-import "./pagina_monto.css"
+import MainContent from './maincontent';
+import './pagina_monto.css'; // Asegúrate de que la ruta sea correcta
 
 const Monto = () => {
   return (
@@ -12,11 +12,13 @@ const Monto = () => {
       <Cabecera />
       <Container fluid>
         <Row>
-          <Col md={2}>
+          <Col md={2} className="p-0">
             <Sidebar />
           </Col>
-          <Col md={10}>
-            <MainContent />
+          <Col md={10} className="p-0">
+            <div className="main-content">
+              <MainContent />
+            </div>
           </Col>
         </Row>
       </Container>

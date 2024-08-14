@@ -1,0 +1,49 @@
+/* pagina_monto.css */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container-fluid {
+    flex: 1; /* Esto asegura que el contenido principal ocupe el espacio restante */
+}
+
+.row {
+    flex: 1;
+}
+
+.sidebar {
+    background-color: #f8f9fa; /* Fondo claro y suave */
+    padding-top: 1rem; /* Espaciado superior */
+    height: calc(100vh - 56px); /* Altura completa de la ventana menos la altura de la cabecera (ajustar según la altura de tu cabecera) */
+    position: fixed; /* Fijo en el lado izquierdo */
+    top: 56px; /* Ajustar según la altura de la cabecera */
+    left: 0;
+    width: 250px; /* Ancho fijo del sidebar */
+    border-right: 1px solid #dee2e6; /* Borde sutil derecho */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transición para ocultar y mostrar */
+    transform: translateX(0); /* Mostrar por defecto */
+    opacity: 1; /* Opacidad por defecto */
+    z-index: 100; /* Asegura que el sidebar esté por encima de otros contenidos */
+}
+
+.sidebar.hidden {
+    transform: translateX(-100%); /* Ocultar moviéndolo fuera de la pantalla */
+    opacity: 0; /* Hacerlo transparente */
+}
+
+.sidebar-content {
+    padding: 1rem;
+}
+
+.main-content {
+    margin-left: 250px; /* Deja espacio para el sidebar */
+    padding: 1rem;
+}
