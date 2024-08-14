@@ -2,12 +2,18 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import './body.css';
 import inicio from "../imagenes/imagen_principal.png";
+import { useNavigate } from 'react-router-dom';
+
 export const Body = () => {
+    const navigate = useNavigate();
+    const handleRegisterClick = () => {
+        navigate('/registro');
+    };
   return (
     <div className="body-container">
       <div className="left-column">
         <img src={inicio} alt="Imagen" width="400" className="image" />
-        <Button variant="primary" size="lg" className="register-button">
+        <Button variant="primary" size="lg" className="register-button" onClick={handleRegisterClick}>
           Regístrate Gratis
         </Button>
       </div>
