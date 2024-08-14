@@ -1,0 +1,73 @@
+/* Estilos para el sidebar */
+.bg-light {
+    background-color: #f8f9fa !important; /* Fondo claro */
+}
+
+.pt-3 {
+    padding-top: 1rem !important; /* Espaciado superior */
+}
+
+.sidebar {
+    height: 100vh; /* Altura completa de la ventana */
+    position: fixed; /* Fijo en el lado izquierdo */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+    border-right: 1px solid #dee2e6; /* Borde derecho para separación */
+}
+
+h5 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+
+ul {
+    padding-left: 1rem;
+}
+
+.list-unstyled {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-unstyled li {
+    margin-bottom: 0.5rem;
+}
+
+.list-unstyled a {
+    text-decoration: none;
+    color: #007bff; /* Color del enlace */
+    font-size: 1rem;
+    display: block;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s ease;
+}
+
+.list-unstyled a:hover {
+    background-color: #e2e6ea; /* Fondo al pasar el ratón */
+    color: #0056b3; /* Color del enlace al pasar el ratón */
+}
+
+ul ul {
+    padding-left: 1.5rem; /* Indentación para submenús */
+}
+
+ul ul li {
+    margin-bottom: 0.25rem;
+}
+
+ul ul li a {
+    font-size: 0.875rem;
+}
+
+.sidebar p {
+    padding: 1rem;
+    font-size: 0.875rem;
+    color: #6c757d; /* Color del texto de la nota */
+    background-color: #e9ecef; /* Fondo de la nota */
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+}
