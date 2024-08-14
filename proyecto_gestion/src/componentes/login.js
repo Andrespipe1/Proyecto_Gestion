@@ -46,7 +46,7 @@ const Login = () => {
         if (validateForm()) {
             console.log('Inicio de sesión exitoso');
 
-            navigate('/');
+            navigate('/pagina_monto');
         }
     };
 
@@ -58,8 +58,8 @@ const Login = () => {
         navigate('/registro');
     };
 
-    const handleloginClick = () => {
-        navigate('/pagina_monto');
+    const handleCancelClick = () => {
+        navigate('/');
     };
 
     return (
@@ -95,7 +95,9 @@ const Login = () => {
                         {errors.password && <div className="invalid-feedback">{errors.password}</div>}
                     </div>
 
-                    <button type="submit" className="btn btn-primary w-100" onClick={handleloginClick}>Iniciar Sesión</button>
+                    <button type="submit" className="btn btn-primary w-100" onClick={handleSubmit}>Iniciar Sesión</button>
+                    <button type="submit" className="btn btn-primary w-100" onClick={handleCancelClick}>Cancelar</button>
+
                     <div className="text-center mt-3">
                         <a href="#!" className="btn btn-link" onClick={handleForgotPasswordClick}>Olvidaste tu contraseña?</a>
                         <br />

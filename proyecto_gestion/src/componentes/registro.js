@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './registro.css'; // Asegúrate de tener el CSS adecuado para este componente
 import { Cabecera } from './cabecera';
 import { Pie } from './pie';
+import { useNavigate } from 'react-router-dom';
+
 const Registro = () => {
     const [formValues, setFormValues] = useState({
         nombre: '',
@@ -64,10 +66,14 @@ const Registro = () => {
             }, 3000);
         }
     };
-
+    const navigate = useNavigate();
+    const handleCancelClick = () => {
+        navigate('/login');
+    };
     return (
         <div>
         <Cabecera></Cabecera>
+        .
         <div className="registro-container">
             <h2>Registro</h2>
             {successMessage && <div className="alert alert-success">{successMessage}</div>}
@@ -125,8 +131,10 @@ const Registro = () => {
                 </div>
 
                 <button type="submit" className="btn btn-primary">Registrarse</button>
+                <button type="submit" className="btn btn-primary" onClick={handleCancelClick}>Cancelar</button>
             </form>
         </div>
+        .
         <Pie></Pie>
         </div>
     );

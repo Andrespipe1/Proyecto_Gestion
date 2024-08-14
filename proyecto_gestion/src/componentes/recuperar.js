@@ -3,8 +3,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './recuperar.css';
 import { Cabecera } from './cabecera';
 import { Pie } from './pie';
+import { useNavigate } from 'react-router-dom';
 
 const RecuperarContrasena = () => {
+
+    const navigate = useNavigate();
+    const handleCancelClick = () => {
+        navigate('/login');
+    };
+
     const [email, setEmail] = useState('');
     const [error, setError] = useState('');
     const [successMessage, setSuccessMessage] = useState('');
@@ -51,6 +58,7 @@ const RecuperarContrasena = () => {
                     </div>
                     {successMessage && <div className="alert alert-success">{successMessage}</div>}
                     <button type="submit" className="btn btn-primary w-100">Enviar Enlace de Recuperación</button>
+                    <button type="submit" className="btn btn-primary w-100" onClick={handleCancelClick}>Cancelar</button>
                 </form>
             </div>
         </div>
