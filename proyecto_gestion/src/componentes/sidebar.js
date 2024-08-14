@@ -13,6 +13,9 @@ const Sidebar = () => {
     const handlegraficoClick = () => {
         navigate('/visualizar');
     };
+    const handlelistasClick = () => {
+        navigate('/visualizarlistas');
+    };
 
     const toggleSidebar = () => {
         setSidebarVisible(!isSidebarVisible);
@@ -31,7 +34,7 @@ const Sidebar = () => {
                         <li>Visualización:</li>
                         <ul>
                             <li><a href="#" onClick={handlegraficoClick}>Gráficos</a></li>
-                            <li><a href="#listas">Listas</a></li>
+                            <li><a href="#listas" onClick={handlelistasClick}>Listas</a></li>
                         </ul>
                         <li>Pagos:</li>
                         <ul>
