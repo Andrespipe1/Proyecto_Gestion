@@ -4,8 +4,11 @@ import { Body } from './componentes/body';
 import { Pie } from './componentes/pie';
 import Login from './componentes/login';
 import Registro from './componentes/registro';
-import { useNavigate } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import Monto from './componentes/pagina_monto';
+
+
 
 function HomePage() {
   const navigate = useNavigate();
@@ -26,6 +29,7 @@ function App() {
         <Route path='/' element={<HomePage />} />
         <Route path='/login' element={<Login />}  />
         <Route path='/registro' element={<Registro/>} />
+        <Route path='/pagina_monto' element={<Monto/>} />
       </Routes>
     </Router>
 
