@@ -14,7 +14,7 @@ export const Cabecera = () => {
 
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
-      <Navbar.Brand href="/" className="navbar-logo">
+      <Navbar.Brand className="navbar-logo">
         <img src={logo} alt="Logo" width="70" className="d-inline-block align-top" />
         <p className='titulo'>POCKETPLAN</p>
       </Navbar.Brand>

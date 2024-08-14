@@ -4,41 +4,41 @@ import './sidebar.css';
 import { useNavigate } from 'react-router-dom';
 
 const Sidebar = () => {
-    const [isVisible, setIsVisible] = useState(true);
+    const [isSidebarVisible, setSidebarVisible] = useState(true);
     const navigate = useNavigate();
 
-    const handleGraficoClick = () => {
+    const handlegraficoClick = () => {
         navigate('/visualizar');
     };
 
     const toggleSidebar = () => {
-        setIsVisible(prev => !prev);
+        setSidebarVisible(!isSidebarVisible);
     };
 
     return (
         <>
-            <button className="sidebar-toggle" onClick={toggleSidebar}>
-                {isVisible ? 'Hide Menu' : '-'}
+            <button className={`sidebar-toggle ${!isSidebarVisible ? 'hidden' : ''}`} onClick={toggleSidebar}>
+                {isSidebarVisible ? 'Ocultar' : '-'}
             </button>
-            <Col md={2} className={`sidebar ${isVisible ? 'visible' : 'hidden'}`}>
+            <Col md={2} className={`sidebar ${!isSidebarVisible ? 'hidden' : ''}`}>
                 <div className="sidebar-content">
                     <h5 className="sidebar-title">Menú</h5>
                     <ul className="list-unstyled">
-                        <li><a href="#ingresar-saldo">Ingresar Saldo</a></li>
+                        <li><a href="#">Ingresar Saldo</a></li>
                         <li>Visualización:</li>
                         <ul>
-                            <li><a href="#" onClick={handleGraficoClick}>Gráficos</a></li>
+                            <li><a href="#" onClick={handlegraficoClick}>Gráficos</a></li>
                             <li><a href="#listas">Listas</a></li>
                         </ul>
                         <li>Pagos:</li>
                         <ul>
                             <li><a href="#registrar">Registrar un pago</a></li>
                         </ul>
+                        <div className="mensaje">
+                            <h4>Consejo del día</h4>
+                            <p>De centavito en centavito se va llegando al dolarito</p>
+                        </div>
                     </ul>
-                    <div className='mensaje'>
-                        <h4>Consejo del día</h4>
-                        <p>De centavito en centavito se va llegando al dolarito</p>  
-                    </div>
                 </div>
             </Col>
         </>
