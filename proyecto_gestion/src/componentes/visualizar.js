@@ -65,21 +65,25 @@ const Visualizar = () => {
         };
     }, []);
 
-    return (<>
-        <Cabecera/>
-        <Sidebar/>
-        <div className="content">
-            <header>
-                
-            </header>
-            <h1>Grafico de gastos realizados</h1>
-            <div className="chart-container">
-                <canvas id="myChart"></canvas>
+    return (
+        <>
+          <div className="wrapper">
+            <Cabecera/>
+            <Sidebar/>
+            <div className="content">
+                <header>
+                    
+                </header>
+                <h1>Grafico de gastos realizados</h1>
+                <div className="chart-container">
+                    <canvas id="myChart"></canvas>
+                </div>
             </div>
-        </div>
-        <Pie/>
+          </div>
+          <Pie/>
         </>
-    );
+      );
+      
 };
 
 
