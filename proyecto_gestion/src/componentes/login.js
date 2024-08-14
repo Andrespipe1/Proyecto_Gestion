@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './login.css';
 
@@ -8,6 +9,7 @@ const Login = () => {
         password: '',
     });
     const [errors, setErrors] = useState({});
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         const { id, value } = e.target;
@@ -41,7 +43,17 @@ const Login = () => {
         event.preventDefault();
         if (validateForm()) {
             console.log('Inicio de sesión exitoso');
+
+            navigate('/');
         }
+    };
+
+    const handleForgotPasswordClick = () => {
+        navigate('/recuperar-password');
+    };
+
+    const handleRegisterClick = () => {
+        navigate('/registro');
     };
 
     return (
@@ -77,9 +89,9 @@ const Login = () => {
 
                     <button type="submit" className="btn btn-primary w-100">Iniciar Sesión</button>
                     <div className="text-center mt-3">
-                        <a href="#!" className="btn btn-link">Olvidaste tu contraseña?</a>
+                        <a href="#!" className="btn btn-link" onClick={handleForgotPasswordClick}>Olvidaste tu contraseña?</a>
                         <br />
-                        <a href="#!" className="btn btn-link">¿No tienes cuenta? Regístrate</a>
+                        <a href="#!" className="btn btn-link" onClick={handleRegisterClick}>¿No tienes cuenta? Regístrate</a>
                     </div>
                 </form>
             </div>
