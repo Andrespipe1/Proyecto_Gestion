@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import Monto from './componentes/pagina_monto';
 import Visualizar from './componentes/visualizar';
+import Listas from './componentes/visualizarlistas';
 
 
 
@@ -32,6 +33,8 @@ function App() {
         <Route path='/registro' element={<Registro/>} />
         <Route path='/pagina_monto' element={<Monto/>} />
         <Route path='/visualizar' element={<Visualizar/>}/>
+        <Route path='/visualizarlistas' element={<Listas/>}/>
+
       </Routes>
     </Router>
 
