@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+  }
+  
+  .sidebar {
+    flex: 0 0 200px; /* Sets the width of the sidebar to 200px */
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 1rem;
+  }
+  
+  .main-content {
+    flex: 1; /* Takes up the remaining space */
+    background-color: #fff; /* White background */
+    padding: 1rem;
+  }
+  .sidebar h5 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .sidebar ul {
+    padding-left: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .sidebar a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .sidebar a:hover {
+    color: #007bff;
+  }
+  .main-content .row {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  

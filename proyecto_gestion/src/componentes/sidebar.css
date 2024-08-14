@@ -112,8 +112,8 @@ ul ul li a {
 }
 
 .sidebar-toggle.hidden {
-    background-color: rgba(0, 123, 255, 0.5); /* Fondo azul translúcido */
-    color: rgba(255, 255, 255, 0.7); /* Texto blanco translúcido */
+    background-color: rgba(0, 123, 255, 0.3); /* Fondo azul translúcido */
+    color: rgba(255, 255, 255, 0.4); /* Texto blanco translúcido */
 }
 
 .sidebar-toggle:hover {

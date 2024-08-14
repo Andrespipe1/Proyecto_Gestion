@@ -7,6 +7,9 @@ const Sidebar = () => {
     const [isSidebarVisible, setSidebarVisible] = useState(true);
     const navigate = useNavigate();
 
+    const handlemontoClick = () => {
+        navigate('/pagina_monto');
+    };
     const handlegraficoClick = () => {
         navigate('/visualizar');
     };
@@ -24,7 +27,7 @@ const Sidebar = () => {
                 <div className="sidebar-content">
                     <h5 className="sidebar-title">Menú</h5>
                     <ul className="list-unstyled">
-                        <li><a href="#">Ingresar Saldo</a></li>
+                        <li><a href="#" onClick={handlemontoClick}>Ingresar Saldo</a></li>
                         <li>Visualización:</li>
                         <ul>
                             <li><a href="#" onClick={handlegraficoClick}>Gráficos</a></li>
