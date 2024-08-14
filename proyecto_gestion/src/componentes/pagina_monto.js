@@ -19,6 +19,10 @@ const Monto = () => {
             <div className="main-content">
               <MainContent />
             </div>
+          <p className='xd'>.</p>
+          <p className='xd'>.</p>
+          <p className='xd'>.</p>
+          <p className='xd'>.</p>
           </Col>
         </Row>
       </Container>

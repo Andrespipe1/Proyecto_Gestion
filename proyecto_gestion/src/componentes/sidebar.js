@@ -40,6 +40,10 @@ const Sidebar = () => {
                         <ul>
                             <li><a href="#registrar" onClick={handlemontoClick}>Registrar un pago</a></li>
                         </ul>
+                        <li>Recordatorios:</li>
+                        <ul>
+                            <li><a href="#registrar" onClick={handlemontoClick}>Registrar un pago</a></li>
+                        </ul>
                         <div className="mensaje">
                             <h4>Consejo del día</h4>
                             <p>De centavito en centavito se va llegando al dolarito</p>
